@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
+import { Lucas } from "./components/lucas/lucas";
+import { MeetTasker } from "./components/MeetTasker/MeetTasker";
+import { ThingsToKnow } from './components/ThingsToKnow/ThingsToKnow';
+import { Articles } from './components/Articles/Articles';
+import { TopCategories } from './components/TopCategories/TopCategories'
+import { Footer } from './components/Footer/Footer'
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  render() {
+
+    return (
+      <div className="App">
+      <Lucas />
+        <MeetTasker />
+        <ThingsToKnow />
+        <Articles />
+        <TopCategories />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
